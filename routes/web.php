@@ -18,3 +18,12 @@ Route::get('/prueba', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Leer
+Route::get('/admin/products', 'ProductController@index'); //listar
+
+//Crear
+Route::get('/admin/products', 'ProductController@create'); //ver el formulario 
+Route::post('/admin/products', 'ProductController@store'); //registrar (presionar el botón)
+
+
